@@ -55,12 +55,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Profile.cs" />
+    <Compile Include="Migrations\202012151450067_ProfileUserTableUpgrade.cs" />
+    <Compile Include="Migrations\202012151450067_ProfileUserTableUpgrade.Designer.cs">
+      <DependentUpon>202012151450067_ProfileUserTableUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012151459547_AddingMoreFieldsToUser.cs" />
+    <Compile Include="Migrations\202012151459547_AddingMoreFieldsToUser.Designer.cs">
+      <DependentUpon>202012151459547_AddingMoreFieldsToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012151450067_ProfileUserTableUpgrade.resx">
+      <DependentUpon>202012151450067_ProfileUserTableUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012151459547_AddingMoreFieldsToUser.resx">
+      <DependentUpon>202012151459547_AddingMoreFieldsToUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
