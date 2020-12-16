@@ -25,6 +25,8 @@ namespace Sparen.Data
         
         public string LastName { get; set; }
         public string Address { get; set; }
+
+        public virtual CheckingAccount CheckingAccount { get; set; }
         
 
     }
@@ -40,6 +42,12 @@ namespace Sparen.Data
         {
             return new ApplicationDbContext();
         }
+        public DbSet<CheckingAccount> CheckingAccounts { get; set; }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<CheckingAccount>().HasKey(x => x.AccountNumber);
+        //    base.OnModelCreating(modelBuilder);
+        //}
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -49,6 +57,8 @@ namespace Sparen.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            
         }
 
         public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
