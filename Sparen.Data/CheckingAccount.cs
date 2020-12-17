@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sparen.Data
 {
+    
     public class CheckingAccount : Account
     { 
+        
 
         //set in controller
         public string AccountType {get; set;}

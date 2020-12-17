@@ -57,11 +57,21 @@
     <Compile Include="CheckingAccount.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Account.cs" />
+    <Compile Include="Migrations\202012171612073_CheckingAccountStartingValue.cs" />
+    <Compile Include="Migrations\202012171612073_CheckingAccountStartingValue.Designer.cs">
+      <DependentUpon>202012171612073_CheckingAccountStartingValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012171612073_CheckingAccountStartingValue.resx">
+      <DependentUpon>202012171612073_CheckingAccountStartingValue.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
